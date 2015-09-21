@@ -20,7 +20,17 @@
   <p>{{"HELLO, WORLD" | lowercase}}</p>
 
 
-  <p>{{3.14159265359}}</p>
+  <p>{{3.14159265359| currency:"&euro;"  }}</p>
+
+  <hr>
+
+  <h1>Please say something</h1>
+  <input type="text" ng-model="something">
+
+  <p>Yelling: {{ something | uppercase }}</p>
+  <p>whispering: {{something | lowercase}}</p>
+
+
 </div>
 
 
