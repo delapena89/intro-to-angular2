@@ -29,6 +29,32 @@
 
   <p>Yelling: {{ something | uppercase }}</p>
   <p>whispering: {{something | lowercase}}</p>
+  <hr>
+
+  <p>{{3.14159265359 | number:3}}</p>
+  <p>{{3.14159265359 | number:5}}</p>
+  <p>{{3.14159265359 | number:7}}</p>
+
+  <h2>How many digits of pi do you want?</h2>
+    <select ng-model="digits" ng-inti="3">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+    </select>
+
+  <h4>{{ 3.14159265359 | number: digits }}</h4>
+
+  <ng-pluralize count="digits"
+    when="{'1': 'here is the first digit of pi.',
+    'other': 'here are the {} digits of pi.'}">
+  </ng-pluralize>
+
+  <hr>
+
 
 
 </div>
